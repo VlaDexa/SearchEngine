@@ -8,12 +8,12 @@
             $("#myInput").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
                 if (value != 0) {
-                    $("#myList li").filter(function () {
+                    $("#myList div").filter(function () {
                         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                     });
                 }
                 else {
-                    $("#myList li").filter(function () {
+                    $("#myList div").filter(function () {
                         $(this).toggle($(this).text().toLowerCase().indexOf(value) > 1)
                     });
                 }
@@ -31,10 +31,10 @@
     <br>
 
     <ul id="myList">
-        <li style="display: none;">Люда</li>
-        <li style="display: none;">Максим</li>
-        <li style="display: none;">Гаррош</li>
-        <li style="display: none;">Иллидан</li>
+        <div style="display: none;">Люда</div>
+        <div style="display: none;">Максим</div>
+        <div style="display: none;">Гаррош</div>
+        <div style="display: none;">Иллидан</div>
     </ul>
 
 </body>
