@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                if (value != 0) {
+                    $("#myList li").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                }
+                else {
+                    $("#myList li").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > 1)
+                    });
+                }
+            }
+            );
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>Поиск по фильтрам с помощью страшного jQuery</h2>
+    <p>Давай, давай, нападай</p>
+    <input id="myInput" type="text" placeholder="Search..">
+    <br>
+
+    <ul id="myList">
+        <li style="display: none;">Люда</li>
+        <li style="display: none;">Максим</li>
+        <li style="display: none;">Гаррош</li>
+        <li style="display: none;">Иллидан</li>
+    </ul>
+
+</body>
+
+</html>
